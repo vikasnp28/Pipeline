@@ -237,7 +237,7 @@ pipeline {
                                 RetryAttempt = RetryAttempt + 1
 
                                  // Download required common GitHub repositories
-								sh "pwsh -File '/${Globals.RootFolder}/PullFromGitHub.ps1' -GitRepo 'workplace/Dev-Studio-Waldo-MWS-Pipeline' -ReleaseId 'beta1.8.0' -GitHubAPIKey '${env.GIT_ACCOUNT}' -TargetFolder '${Globals.RootFolder}' " 
+								sh "pwsh -File '/${Globals.RootFolder}/PullFromGitHub.ps1' -GitRepo 'workplace/Dev-Studio-Waldo-MWS-Pipeline' -ReleaseId 'beta2.0' -GitHubAPIKey '${env.GIT_ACCOUNT}' -TargetFolder '${Globals.RootFolder}' " 
                                 sh "pwsh -File '/${Globals.RootPipelineFolder}/PowerShell/PullFromGitHub.ps1' -GitRepo 'workplace/Jenkins-Gallery' -ReleaseId '2.2.1' -GitHubAPIKey '${env.GIT_ACCOUNT}' -TargetFolder '${Globals.RootPipelineFolder}' "
 
                                 loadScripts()
