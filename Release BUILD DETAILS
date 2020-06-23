@@ -1,0 +1,209 @@
+23:47:55  Started by user Vikas
+23:47:55  Replayed #355
+23:47:55 18:17:55  Connecting to https://github.dxc.com/api/v3 using rvannugt/******
+23:47:56  Obtained Jenkinsfile from 9123295644ece7e0c5bc65374e8ee95660055065
+23:47:56  Running in Durability level: MAX_SURVIVABILITY
+23:47:56  Loading library pdxc-pipeline-lib@master
+23:47:56  Examining Platform-DXC/devops-jenkins-sharedlibs
+23:47:56  Attempting to resolve master as a branch
+23:47:56  Resolved master as branch master at revision 0aaab4350bd0ea90b29a7c42d6f02bb23d884ad6
+23:47:56  using credential 4c04e0d2-09c6-42f3-b57d-dc91b6d76d50
+23:47:56   > git rev-parse --is-inside-work-tree # timeout=10
+23:47:56  Fetching changes from the remote Git repository
+23:47:56   > git config remote.origin.url https://github.dxc.com/Platform-DXC/devops-jenkins-sharedlibs.git # timeout=10
+23:47:56  Fetching without tags
+23:47:56  Fetching upstream changes from https://github.dxc.com/Platform-DXC/devops-jenkins-sharedlibs.git
+23:47:56   > git --version # timeout=10
+23:47:56  using GIT_ASKPASS to set credentials pdxc-jenkins
+23:47:56   > git fetch --no-tags --progress -- https://github.dxc.com/Platform-DXC/devops-jenkins-sharedlibs.git +refs/heads/master:refs/remotes/origin/master # timeout=10
+23:47:56  Checking out Revision 0aaab4350bd0ea90b29a7c42d6f02bb23d884ad6 (master)
+23:47:56   > git config core.sparsecheckout # timeout=10
+23:47:56   > git checkout -f 0aaab4350bd0ea90b29a7c42d6f02bb23d884ad6 # timeout=10
+23:47:56  Commit message: "Automatically generated doc"
+23:47:56  [Pipeline] Start of Pipeline
+23:47:57  [Pipeline] node
+23:47:57  Running on EC2 (jenkins-slaves-us-east-1) - Ubuntu 18.04 (i-0a8a1337f3161fa76) in /home/ubuntu/workspace/tudio-Waldo-MWS-FrW_vyoganarasim
+23:47:57  [Pipeline] {
+23:47:57  [Pipeline] stage
+23:47:57  [Pipeline] { (Declarative: Checkout SCM)
+23:47:57  [Pipeline] checkout
+23:47:57  using credential 7427fd39-290c-4fe1-ac13-39eb23107bb6
+23:47:57  Fetching changes from the remote Git repository
+23:47:57  Fetching without tags
+23:47:57  Checking out Revision 9123295644ece7e0c5bc65374e8ee95660055065 (vyoganarasim)
+23:47:57  Commit message: "Create create-github-release.ps1"
+23:47:57   > git rev-parse --is-inside-work-tree # timeout=10
+23:47:57   > git config remote.origin.url https://github.dxc.com/workplace/Dev-Studio-Waldo-MWS-FrW.git # timeout=10
+23:47:57  Fetching upstream changes from https://github.dxc.com/workplace/Dev-Studio-Waldo-MWS-FrW.git
+23:47:57   > git --version # timeout=10
+23:47:57  using GIT_ASKPASS to set credentials 
+23:47:57   > git fetch --no-tags --progress -- https://github.dxc.com/workplace/Dev-Studio-Waldo-MWS-FrW.git +refs/heads/vyoganarasim:refs/remotes/origin/vyoganarasim # timeout=10
+23:47:57   > git config core.sparsecheckout # timeout=10
+23:47:57   > git checkout -f 9123295644ece7e0c5bc65374e8ee95660055065 # timeout=10
+23:47:57   > git rev-list --no-walk 9123295644ece7e0c5bc65374e8ee95660055065 # timeout=10
+23:47:57  [Pipeline] }
+23:47:57  [Pipeline] // stage
+23:47:57  [Pipeline] withEnv
+23:47:57  [Pipeline] {
+23:47:57  [Pipeline] withEnv
+23:47:57  [Pipeline] {
+23:47:57  [Pipeline] withDockerRegistry
+23:47:57  $ docker login -u svc-wm-docker-ro -p ******** https://docker.dxc.com
+23:47:57  WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+23:47:57  WARNING! Your password will be stored unencrypted in /home/ubuntu/workspace/tudio-Waldo-MWS-FrW_vyoganarasim@tmp/4ae6a200-42bf-4caf-b10a-148bcf446b85/config.json.
+23:47:57  Configure a credential helper to remove this warning. See
+23:47:57  https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+23:47:57  
+23:47:57  Login Succeeded
+23:47:57  [Pipeline] {
+23:47:57  [Pipeline] isUnix
+23:47:57  [Pipeline] sh
+23:47:58  + docker inspect -f . docker.dxc.com/wm-docker/powershelldocker:1.0.0
+23:47:58  .
+23:47:58  [Pipeline] withDockerContainer
+23:47:58  EC2 (jenkins-slaves-us-east-1) - Ubuntu 18.04 (i-0a8a1337f3161fa76) does not seem to be running inside a container
+23:47:58  $ docker run -t -d -u 0:0 -w /home/ubuntu/workspace/tudio-Waldo-MWS-FrW_vyoganarasim -v /home/ubuntu/workspace/tudio-Waldo-MWS-FrW_vyoganarasim:/home/ubuntu/workspace/tudio-Waldo-MWS-FrW_vyoganarasim:rw,z -v /home/ubuntu/workspace/tudio-Waldo-MWS-FrW_vyoganarasim@tmp:/home/ubuntu/workspace/tudio-Waldo-MWS-FrW_vyoganarasim@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** docker.dxc.com/wm-docker/powershelldocker:1.0.0 cat
+23:47:58  $ docker top 5a3a9c7020ed28e3c204c6bea35c9b5b01cf03a784423c824fed0a151835a67c -eo pid,comm
+23:47:58  [Pipeline] {
+23:47:58  [Pipeline] withCredentials
+23:47:58  Masking supported pattern matches of $SPWebCreds or $SPWebCreds_USR or $SPWebCreds_PSW or $GIT_ACCOUNT or $GIT_ACCOUNT_USR or $GIT_ACCOUNT_PSW or $MSTEAMS_WEBHOOKURL or $RUN_PIPELINE or $TF_VAR_ADMIN_ACCOUNT or $TF_VAR_ADMIN_ACCOUNT_USR or $TF_VAR_ADMIN_ACCOUNT_PSW or $XUser2Creds or $XUser2Creds_USR or $XUser2Creds_PSW or $MSTEAMS_WEBHOOKURL_DEV or $XUser1Creds or $XUser1Creds_USR or $XUser1Creds_PSW or $DomainJoinCreds or $DomainJoinCreds_USR or $DomainJoinCreds_PSW or $DEVELOPER_BRANCHES or $SPMgtCreds or $SPMgtCreds_USR or $SPMgtCreds_PSW or $SQLAgentCreds or $SQLAgentCreds_USR or $SQLAgentCreds_PSW or $SchedTaskCreds or $SchedTaskCreds_USR or $SchedTaskCreds_PSW or $SQLServiceCreds or $SQLServiceCreds_USR or $SQLServiceCreds_PSW or $ADMasterConfigCreds or $ADMasterConfigCreds_USR or $ADMasterConfigCreds_PSW or $SPPassphraseCreds or $SPPassphraseCreds_USR or $SPPassphraseCreds_PSW or $ADConfigCreds or $ADConfigCreds_USR or $ADConfigCreds_PSW or $SPAppCreds or $SPAppCreds_USR or $SPAppCreds_PSW
+23:47:58  [Pipeline] {
+23:47:59  [Pipeline] withEnv
+23:47:59  [Pipeline] {
+23:47:59  [Pipeline] timestamps
+23:47:59  The timestamps step is unnecessary when timestamps are enabled for all Pipeline builds.
+23:47:59  [Pipeline] {
+23:47:59  [Pipeline] timeout
+23:47:59  Timeout set to expire in 4 hr 0 min
+23:47:59  [Pipeline] {
+23:47:59  [Pipeline] stage
+23:47:59  [Pipeline] { (1.0 Configuration Stages)
+23:47:59  [Pipeline] stage
+23:47:59  [Pipeline] { (1.1 Set up Workspace)
+23:47:59  [Pipeline] script
+23:47:59  [Pipeline] {
+23:47:59  [Pipeline] retry
+23:47:59  [Pipeline] {
+23:47:59  [Pipeline] sh
+23:47:59  + pwsh -File //home/ubuntu/workspace/tudio-Waldo-MWS-FrW_vyoganarasim/PullFromGitHub.ps1 -GitRepo workplace/Dev-Studio-Waldo-MWS-Pipeline -ReleaseId beta1.5.0 -GitHubAPIKey **** -TargetFolder /home/ubuntu/workspace/tudio-Waldo-MWS-FrW_vyoganarasim
+23:48:00  Start GitHub pull
+23:48:00  Branch: beta1.5.0 was found
+23:48:00  Source is https://github.dxc.com/workplace/Dev-Studio-Waldo-MWS-Pipeline/archive/beta1.5.0.zip
+23:48:00  Target Zips is /home/ubuntu/workspace/tudio-Waldo-MWS-FrW_vyoganarasim/Downloads
+23:48:00  Target folder for Repo is /home/ubuntu/workspace/tudio-Waldo-MWS-FrW_vyoganarasim/Dev-Studio-Waldo-MWS-Pipeline
+23:48:01  /home/ubuntu/workspace/tudio-Waldo-MWS-FrW_vyoganarasim/Downloads/Dev-Studio-Waldo-MWS-Pipeline.zip was succesfully downloaded from GitHub.
+23:48:01                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Expand-Archive                                                                     The archive file '/home/ubuntu/workspace/tudio-Waldo-MWS-FrW_vyoganarasim/Do    wnloads/Dev-Studio-Waldo-MWS-Pipeline.zip' expansion is in progress...          [oooooooooooo                                                        ]                                                                                                                                                                       Expand-Archive                                                                     The archive file '/home/ubuntu/workspace/tudio-Waldo-MWS-FrW_vyoganarasim/Do    wnloads/Dev-Studio-Waldo-MWS-Pipeline.zip' expansion is in progress...          [oooooooooooooooooooooooooooooooooooooooooooooo                      ]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Completed GitHub pull
+23:48:02  [Pipeline] sh
+23:48:02  + pwsh -File //home/ubuntu/workspace/tudio-Waldo-MWS-FrW_vyoganarasim/Dev-Studio-Waldo-MWS-Pipeline/PowerShell/PullFromGitHub.ps1 -GitRepo workplace/Jenkins-Gallery -ReleaseId 2.2.1 -GitHubAPIKey **** -TargetFolder /home/ubuntu/workspace/tudio-Waldo-MWS-FrW_vyoganarasim/Dev-Studio-Waldo-MWS-Pipeline
+23:48:03  Start GitHub pull
+23:48:03  Branch: 2.2.1 was found
+23:48:03  
+23:48:03  
+23:48:03      Directory: /home/ubuntu/workspace/tudio-Waldo-MWS-FrW_vyoganarasim/Dev-Stud
+23:48:03  io-Waldo-MWS-Pipeline
+23:48:03  
+23:48:03  Mode                 LastWriteTime         Length Name
+23:48:03  ----                 -------------         ------ ----
+23:48:03  d----           6/22/2020  6:18 PM                Downloads
+23:48:03  Source is https://github.dxc.com/workplace/Jenkins-Gallery/archive/2.2.1.zip
+23:48:03  Target Zips is /home/ubuntu/workspace/tudio-Waldo-MWS-FrW_vyoganarasim/Dev-Studio-Waldo-MWS-Pipeline/Downloads
+23:48:03  Target folder for Repo is /home/ubuntu/workspace/tudio-Waldo-MWS-FrW_vyoganarasim/Dev-Studio-Waldo-MWS-Pipeline/Jenkins-Gallery
+23:48:03  /home/ubuntu/workspace/tudio-Waldo-MWS-FrW_vyoganarasim/Dev-Studio-Waldo-MWS-Pipeline/Downloads/Jenkins-Gallery.zip was succesfully downloaded from GitHub.
+23:48:04                                                                                                                                                                                                                                                                     Completed GitHub pull
+23:48:04  
+23:48:04  [Pipeline] }
+23:48:04  [Pipeline] // retry
+23:48:04  [Pipeline] }
+23:48:04  [Pipeline] // script
+23:48:04  [Pipeline] }
+23:48:04  [Pipeline] // stage
+23:48:04  [Pipeline] stage
+23:48:04  [Pipeline] { (3.0 GitHub Release)
+23:48:04  [Pipeline] script
+23:48:04  [Pipeline] {
+23:48:04  [Pipeline] withCredentials
+23:48:04  Masking supported pattern matches of $GIT_ACCOUNT_USR or $GIT_ACCOUNT_PSW
+23:48:04  [Pipeline] {
+23:48:04  [Pipeline] sh
+23:48:04  + printf '{"tag_name": "beta-v1.0.0","target_commitish": "vyoganarasim","name": "Beta Release v1.0.0","body": "Release of Beta -version 1.0.0","draft": false,"prerelease": false}'
+23:48:04  + API_JSON='{"tag_name": "beta-v1.0.0","target_commitish": "vyoganarasim","name": "Beta Release v1.0.0","body": "Release of Beta -version 1.0.0","draft": false,"prerelease": false}'
+23:48:04  + curl --data '{"tag_name": "beta-v1.0.0","target_commitish": "vyoganarasim","name": "Beta Release v1.0.0","body": "Release of Beta -version 1.0.0","draft": false,"prerelease": false}' 'https://github.dxc.com/api/v3/repos/workplace/Dev-Studio-Waldo-MWS-FrW/releases?access_token=857362ac55eec0e48c987c1623af240be5d4d786'
+23:48:04    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+23:48:04                                   Dload  Upload   Total   Spent    Left  Speed
+23:48:04  
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0{
+23:48:04    "url": "https://github.dxc.com/api/v3/repos/workplace/Dev-Studio-Waldo-MWS-FrW/releases/23760",
+23:48:04    "assets_url": "https://github.dxc.com/api/v3/repos/workplace/Dev-Studio-Waldo-MWS-FrW/releases/23760/assets",
+23:48:04    "upload_url": "https://github.dxc.com/api/uploads/repos/workplace/Dev-Studio-Waldo-MWS-FrW/releases/23760/assets{?name,label}",
+23:48:04    "html_url": "https://github.dxc.com/workplace/Dev-Studio-Waldo-MWS-FrW/releases/tag/beta-v1.0.0",
+23:48:04    "id": 23760,
+23:48:04    "node_id": "MDc6UmVsZWFzZTIzNzYw",
+23:48:04    "tag_name": "beta-v1.0.0",
+23:48:04    "target_commitish": "vyoganarasim",
+23:48:04    "name": "Beta Release v1.0.0",
+23:48:04    "draft": false,
+23:48:04    "author": {
+23:48:04      "login": "vyoganarasim",
+23:48:04      "id": 62143,
+23:48:04      "node_id": "MDQ6VXNlcjYyMTQz",
+23:48:04      "avatar_url": "https://github.dxc.com/avatars/u/62143?",
+23:48:04      "gravatar_id": "",
+23:48:04      "url": "https://github.dxc.com/api/v3/users/vyoganarasim",
+23:48:04      "html_url": "https://github.dxc.com/vyoganarasim",
+23:48:04      "followers_url": "https://github.dxc.com/api/v3/users/vyoganarasim/followers",
+23:48:04      "following_url": "https://github.dxc.com/api/v3/users/vyoganarasim/following{/other_user}",
+23:48:04      "gists_url": "https://github.dxc.com/api/v3/users/vyoganarasim/gists{/gist_id}",
+23:48:04      "starred_url": "https://github.dxc.com/api/v3/users/vyoganarasim/starred{/owner}{/repo}",
+23:48:04      "subscriptions_url": "https://github.dxc.com/api/v
+100  2306  100  2138  100   168  14348   1127 --:--:-- --:--:-- --:--:-- 15476
+23:48:04  3/users/vyoganarasim/subscriptions",
+23:48:04      "organizations_url": "https://github.dxc.com/api/v3/users/vyoganarasim/orgs",
+23:48:04      "repos_url": "https://github.dxc.com/api/v3/users/vyoganarasim/repos",
+23:48:04      "events_url": "https://github.dxc.com/api/v3/users/vyoganarasim/events{/privacy}",
+23:48:04      "received_events_url": "https://github.dxc.com/api/v3/users/vyoganarasim/received_events",
+23:48:04      "type": "User",
+23:48:04      "site_admin": false
+23:48:04    },
+23:48:04    "prerelease": false,
+23:48:04    "created_at": "2020-06-22T14:59:11Z",
+23:48:04    "published_at": "2020-06-22T18:18:04Z",
+23:48:04    "assets": [
+23:48:04  
+23:48:04    ],
+23:48:04    "tarball_url": "https://github.dxc.com/api/v3/repos/workplace/Dev-Studio-Waldo-MWS-FrW/tarball/beta-v1.0.0",
+23:48:04    "zipball_url": "https://github.dxc.com/api/v3/repos/workplace/Dev-Studio-Waldo-MWS-FrW/zipball/beta-v1.0.0",
+23:48:04    "body": "Release of Beta -version 1.0.0"
+23:48:04  }
+23:48:04  [Pipeline] }
+23:48:04  [Pipeline] // withCredentials
+23:48:04  [Pipeline] }
+23:48:04  [Pipeline] // script
+23:48:04  [Pipeline] }
+23:48:05  [Pipeline] // stage
+23:48:05  [Pipeline] }
+23:48:05  [Pipeline] // stage
+23:48:05  [Pipeline] }
+23:48:05  [Pipeline] // timeout
+23:48:05  [Pipeline] }
+23:48:05  [Pipeline] // timestamps
+23:48:05  [Pipeline] }
+23:48:05  [Pipeline] // withEnv
+23:48:05  [Pipeline] }
+23:48:05  [Pipeline] // withCredentials
+23:48:05  [Pipeline] }
+23:48:05  $ docker stop --time=1 5a3a9c7020ed28e3c204c6bea35c9b5b01cf03a784423c824fed0a151835a67c
+23:48:06  $ docker rm -f 5a3a9c7020ed28e3c204c6bea35c9b5b01cf03a784423c824fed0a151835a67c
+23:48:06  [Pipeline] // withDockerContainer
+23:48:06  [Pipeline] }
+23:48:06  [Pipeline] // withDockerRegistry
+23:48:06  [Pipeline] }
+23:48:06  [Pipeline] // withEnv
+23:48:06  [Pipeline] }
+23:48:06  [Pipeline] // withEnv
+23:48:06  [Pipeline] }
+23:48:06  [Pipeline] // node
+23:48:06  [Pipeline] End of Pipeline
+23:48:06  
+23:48:06  GitHub has been notified of this commit’s build result
+23:48:06  
+23:48:06  Finished: SUCCESS
